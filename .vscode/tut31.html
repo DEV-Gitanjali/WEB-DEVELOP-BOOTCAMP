@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <style>
+        h1 {
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* div p {
+            color: rgb(0, 0, 128);
+            background-color: orange;
+            font-weight: bold;
+        } */
+        /* div>p{
+            background-color: lightblue;
+            color:white;
+        } */
+      div+p{
+          color: white;
+          background-color:#D2302C;
+      }
+    </style>
+</head>
+<body>
+    <h1> This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is a paragraph and it is not immediately after the div element so no CSS will be applied to it.</p>
+                </li>
+            </ul>
+            <p> This is the second paragraph and it is not immediately after the div element so no CSS will be applied to it.</p>
+        </div>
+        <p> This is the third pargraph and it will get affected because it is immediately afetr the div tag.</p>
+    </div>
+    <p> This is the outer most paragraph and it will also get affected because it is immediately after the div tag. </p>
+</body>
+</html>
