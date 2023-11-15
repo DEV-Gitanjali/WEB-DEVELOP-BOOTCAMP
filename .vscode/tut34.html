@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box shadow & text shadow</title>
+
+    <style>
+
+        .container{
+            display: flex;
+
+
+        }
+
+        .card{
+
+            padding: 23px 12px;
+
+            margin: 23px 12px;
+
+            /* border: 2px solid red; */
+            /* box-shadow: offset-x offset-y color; */
+    /* box-shadow: offset-x offset-y blur-radius color; */
+    /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+
+
+            background-color: burlywood;
+            box-shadow: 10px 13px green;
+            box-shadow: -10px -13px green;
+            box-shadow: 7px 13px 10px green;
+            box-shadow: 7px 13px 10px 34px green 7px 13px 10px 34px green;
+
+            box-shadow: 7px 13px 10px 34px rgb(red, green, blue) ;
+           box-shadow: inset 3px 5px 5px green;
+
+           box-shadow: -3px -2px  green , 4px 6px red;
+
+
+        }
+
+        .card h2{
+
+            text-shadow: 3px 4px red;
+            /* text-shadow: 3px 2px 2px white; */
+            text-shadow :-3px -2px 2px white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card" id="card-1">
+            <h2>this is c++ code</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium iure similique perspiciatis ducimus sapiente. Obcaecati quasi corrupti nisi eum ab ipsum dolor amet nam sunt eveniet. Veritatis libero, corrupti voluptatibus vitae blanditiis ab et</p>.
+        </div>
+
+
+        <div class="card" id="card-2">
+
+            <h2>this is html course</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi optio nobis ad! Tenetur a impedit ut, sunt sint asperiores harum eligendi perspiciatis!</p>
+        </div>
+
+
+        <div class="card" id="card-3">
+
+            <h2>this is card3</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, numquam maxime tempora fugiat adipisci sequi facilis quod inventore iusto labore dolor sint corrupti?</p>
+        </div>
+    </div>
+    
+</body>
+</html>
