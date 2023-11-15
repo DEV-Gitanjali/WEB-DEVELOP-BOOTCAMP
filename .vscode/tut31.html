@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced CSS Selectors</title>
-    <style>
-        h1 {
-            background-color: red;
-            color: black;
-            font-weight: bold;
-            text-align: center;
-        }
-        /* div p {
-            color: rgb(0, 0, 128);
-            background-color: orange;
-            font-weight: bold;
-        } */
-        /* div>p{
-            background-color: lightblue;
-            color:white;
-        } */
-      div+p{
-          color: white;
-          background-color:#D2302C;
-      }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>More on selectors</title>
 </head>
+<style>
+    h1{
+        background-color: red;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* if p is contained by any li which is contained by div */
+     /* div li p{ 
+        color: yellow;
+        background-color: green;
+        /* font-weight: bold; */
+    /* }  */
+
+    /* if p is right inside div then this CSS will be applied */
+     /* div > p{ 
+        color: yellow;
+        background-color: green;
+        font-weight: bold;
+    /* }  */
+
+    /* if p is right after div i.e p is the next sibling of div*/
+     /*div + p{
+        color: white;
+        background-color: rgb(238, 137, 137);
+      } */
+
+      div ul li p{
+
+        color: black;
+        background-color: rgb(173, 115, 227);
+      }
+
+</style>
 <body>
-    <h1> This is more on selectors</h1>
+    <h1>This is more on selectors</h1>
     <div class="container">
         <div class="row">
             <ul>
-                <li class="item">
-                    <p>This is a paragraph and it is not immediately after the div element so no CSS will be applied to it.</p>
-                </li>
+                <li class="item"><p> this is another paragraph inside li</p></li> 
+                <li>this will not get affected</li>
+                <p>this is a para inside ul</p>
             </ul>
-            <p> This is the second paragraph and it is not immediately after the div element so no CSS will be applied to it.</p>
+            <p>This is a paragraph</p>
         </div>
-        <p> This is the third pargraph and it will get affected because it is immediately afetr the div tag.</p>
+        <p>This is another paragraph</p>
     </div>
-    <p> This is the outer most paragraph and it will also get affected because it is immediately after the div tag. </p>
+    <p>this is outermost paragraph</p>
 </body>
 </html>
+
